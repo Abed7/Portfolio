@@ -4,7 +4,7 @@
   --tyrianpurple: #610345;
   --teal: #107e7d;
   --indigodye: #044b7f;
-  --honeydew: #f1ffe7;
+  --honeydew: #f2f2fc;
   --teagreen: #cdfeca;
   --lightgreen: #a9fdac;
   --emerald: #44cf6c;
@@ -31,6 +31,10 @@
   justify-content: end;
   margin: auto;
   padding-right: 5px;
+}
+.fs-nav ul li:hover{
+  color: var(--honeydew);
+  cursor: pointer;
 }
 .fs-nav figure {
   background-color: var(--tyrianpurple);
@@ -77,11 +81,18 @@ li {
     justify-content: ; */
   margin: 0.3rem;
 }
+li:hover{
+  transform: translateX(5%);
+  transition: .3s;
+  color: var(--teal);
+}
+
 i {
   font-size: 1.2rem;
   text-align: left;
   color: var(--teal);
   padding-right: 0.5rem;
+  opacity: .7;
 }
 a {
   text-decoration: none;
@@ -106,20 +117,35 @@ a {
     justify-content: center;
     /* border: var(--pennred) solid 5px; */
     /* border-radius: 5px; */
-    color: var(--pennred);
+    color: var(--tyrianpurple);
 }
-/* i[class=fa-brands]{
+button{
+    padding: .5rem;
+    cursor: pointer;
+    background-color: var(--teal);
+    border: 2px solid var(--tyrianpurple);
+    color: var(--lightgreen);
+    border-radius: 5rem;
+    opacity: .7;
+}
+button:hover,i:hover{
+  opacity: 1;
+  transform: scale(1.1);
+  transition: .3s;
+  cursor: pointer;
+}
+  /* i[class=fa-brands]{
     display: flex;
     flex-direction: row;
 } */
 .about{
-    background-color: var(--emerald);
+    background-color: var(--indigodye);
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    /* justify-content: center; */
-    color: #044b7f;
+    gap: 3rem;
+    justify-content: center;
+    color: var(--emerald2);
     height: 45rem;
 }
 .about h2{
@@ -137,11 +163,18 @@ a {
     margin-left: 5px;
     /* flex-direction: row; */
 }
+.about p{
+  width: 80%;
+  text-align: center;
+}
 .blue-border-h{
-    background-color: #044b7f; 
-    width: 100%;
-    height: 10rem;
-    margin-top: 5rem;
+    background-color: var(--tyrianpurple)  ; 
+    width: 90%;
+    height: 100%;
+    /* margin-top: 5rem; */
+    /* border-radius: 10%; */
+    opacity: .1;
+
 
 }
 .blue-border-v{
@@ -149,4 +182,133 @@ a {
     width: 100%;
     height: 10rem;
     margin-bottom: 5rem;
+}
+.timeline{
+  height: 60rem;
+  background-color: var(--teal);
+  width: 100%;
+  display: flex;  
+  justify-content:  baseline;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+
+}
+.box-1{
+  height: 60rem;
+  background-color: var(--honeydew);
+  /* width: 90%; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+
+}.box-1 h2{
+  padding: 2rem;
+  text-transform: uppercase;
+  border: 1px solid var(--tyrianpurple) ;
+  color: var(--tyrianpurple);
+}
+.gray{
+  background-color: rgba(128, 128, 128, 0.495);
+  height: 10px;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  /* border-radius: 5%; */
+  position: relative;
+  top: 0;
+  /* border: 3px solid blue; */
+}
+.prog{
+  background-color: var(--pennred);
+  height: 20px;
+  width: 70%;
+  /* padding: 10px; */
+  text-align: center;
+  border-radius: 5%;
+  position: absolute;
+  left:0;
+  top: 0;
+  /* border: 2px solid var(--tyrianpurple); */
+
+
+}
+.prog-5{
+  background-color: var(--tyrianpurple);
+  height: 20px;
+  width: 60%;
+  /* padding: 10px; */
+  text-align: center;
+  border-radius: 5%;
+  position: absolute;
+  left:0;
+  top: 0;
+  /* border: 2px solid var(--tyrianpurple); */
+
+}
+/* .box-2{
+  height: 40rem;
+  background-color: var(--indigodye);
+  width: 90%;
+} */
+/* .timeline-2{
+  height: 40rem;
+  background-color: var(--pennred);
+  width: 100%;
+  display: flex;  
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 1rem;
+} */
+.contact{
+  height: 20rem;
+  background-color: var(--tyrianpurple);
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.box-3{
+  /* border: solid 10px var(--emerald); */
+  color: var(--honeydew);
+  /* width: 90%; */
+  height: 20rem;
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+
+}
+.box-3 div{
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+/* .box-4{
+  height: 40rem;
+  background-color: var(--indigodye);
+  width: 90%;
+} */
+
+
+/* Media Query */
+@media screen and (min-width:876px) {
+  nav{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+  }
+  ul li{
+    display: inline-block;
+ 
+  }
+  
 }
